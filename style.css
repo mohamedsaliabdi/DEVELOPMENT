@@ -15,11 +15,34 @@
 
 */
 
+/* border properties
+
+   border          = shorthand: width style color (e.g. 2px solid black)
+   border-width    = how thick the border is (px, thin, medium, thick)
+   border-style    = solid, dashed, dotted, double, groove, ridge, inset, outset, none
+                     (a border won't show without a style!)
+   border-color    = the border color (name, #hex, rgb())
+   border-top      = border on one side only (also border-right, border-bottom, border-left)
+                     e.g. border-bottom: 1px dashed gray
+   border-radius   = rounds the corners (px or %); 50% on a square makes a circle
+                     can set each corner: border-top-left-radius, etc.
+   outline         = like a border but drawn outside, doesn't take up space
+
+*/
+
 P{ 
-    font-family: 'sans-serif';
+    /* font-family: 'sans-serif';
     font-size: 16px;
     font-weight: italic;
     text-decoration: underline;
     text-align: justify;
-    text-transform: lowercase;
+    text-transform: lowercase; */
+
+    border-style: solid;
+    border-width: 1px;
+    border-color:gold;
+    border-radius: 10px;
+    padding: 10px;
+
+
 }
