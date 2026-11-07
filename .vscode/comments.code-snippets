@@ -1,0 +1,39 @@
+{
+  // Type "cmt" then press Tab in a .css file
+  "CSS comment": {
+    "scope": "css",
+    "prefix": "cmt",
+    "body": ["/* ${1:Styles for ${2:section}} */"],
+    "description": "Short CSS comment"
+  },
+  // Type "sec" then press Tab in a .css file for a section header
+  "CSS section header": {
+    "scope": "css",
+    "prefix": "sec",
+    "body": [
+      "/* ==========================",
+      "   ${1:Section name}",
+      "   ========================== */",
+      "$0"
+    ],
+    "description": "CSS section header comment"
+  },
+  // Type "cmt" then press Tab in a .html file
+  "HTML comment": {
+    "scope": "html",
+    "prefix": "cmt",
+    "body": ["<!-- ${1:Start of ${2:section}} -->"],
+    "description": "Short HTML comment"
+  },
+  // Type "sec" then press Tab in a .html file to wrap a block
+  "HTML section block": {
+    "scope": "html",
+    "prefix": "sec",
+    "body": [
+      "<!-- ${1:Section}: start -->",
+      "$0",
+      "<!-- ${1:Section}: end -->"
+    ],
+    "description": "HTML start/end section comments"
+  }
+}
