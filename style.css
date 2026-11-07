@@ -38,11 +38,82 @@ P{
     text-align: justify;
     text-transform: lowercase; */
 
-    border-style: solid;
+    /* border-style: solid;
     border-width: 1px;
     border-color:gold;
     border-radius: 10px;
-    padding: 10px;
+    padding: 10px; */
 
 
 }
+
+
+
+/* background properties
+
+   background            = shorthand: color image repeat position / size
+                           (e.g. lightblue url("image/bg.png") no-repeat center / cover)
+   background-color      = the fill color behind the element (name, #hex, rgb(), transparent)
+   background-image      = an image behind the element: url("path/to/image.png")
+                           can also be a gradient: linear-gradient(red, blue)
+   background-repeat     = repeat (default, tiles it), no-repeat, repeat-x, repeat-y
+   background-position   = where the image sits (top, center, bottom, left, right, or px/%)
+                           e.g. background-position: center top
+   background-size       = how big the image is: auto, cover (fills the box, may crop),
+                           contain (fits whole image, may leave gaps), or px/%
+   background-attachment = scroll (default, moves with page) or fixed (stays put when scrolling)
+   opacity               = see-through-ness of the WHOLE element, 0 to 1
+                           (to fade only the background, use rgba() e.g. rgba(0,0,0,0.5))
+
+*/
+
+
+
+body{
+    background-image:url("image/imagesminn.jpeg");
+    background-repeat:no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+  
+
+ 
+}
+
+h1{
+    background:linear-gradient(to right, skyblue, white);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+}
+
+p{
+    background:linear-gradient(to left, skyblue, white);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
+/* margin properties
+
+   margin          = space OUTSIDE the border, pushes other elements away
+                     shorthand: margin: 10px              (all 4 sides)
+                                margin: 10px 20px         (top/bottom  left/right)
+                                margin: 10px 20px 30px    (top  left/right  bottom)
+                                margin: 10px 20px 30px 40px (top right bottom left - clockwise)
+   margin-top      = space above (also margin-right, margin-bottom, margin-left)
+   margin: auto    = centers a block element horizontally (needs a width set)
+                     e.g. width: 50%; margin: 0 auto;
+   negative margin = pulls elements closer / overlaps them (e.g. margin-top: -10px)
+   margin collapse = top & bottom margins between two blocks merge into the bigger one
+                     (20px + 30px = 30px gap, not 50px)
+
+   padding         = space INSIDE the border, between border and content
+                     same shorthand rules as margin (padding-top, padding-left, etc.)
+                     padding can't be negative or auto
+
+   box model (inside -> out):  content -> padding -> border -> margin
+
+*/
+
+
