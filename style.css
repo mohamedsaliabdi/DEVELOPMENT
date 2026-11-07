@@ -69,7 +69,7 @@ P{
 
 
 
-body{
+/* body{
     background-image:url("image/imagesminn.jpeg");
     background-repeat:no-repeat;
     background-attachment: fixed;
@@ -91,7 +91,7 @@ p{
     background:linear-gradient(to left, skyblue, white);
     background-repeat: no-repeat;
     background-attachment: fixed;
-}
+} */
 
 
 /* margin properties
@@ -114,6 +114,52 @@ p{
 
    box model (inside -> out):  content -> padding -> border -> margin
 
+   ┌─────────────────────────────────────┐
+   │            MARGIN (outside)          │  <- space between this box and others (transparent)
+   │   ┌─────────────────────────────┐   │
+   │   │       BORDER (the line)      │   │  <- the visible edge / frame
+   │   │   ┌─────────────────────┐   │   │
+   │   │   │   PADDING (inside)   │   │   │  <- space between border and content (gets background color)
+   │   │   │   ┌─────────────┐   │   │   │
+   │   │   │   │   CONTENT   │   │   │   │  <- text / image
+   │   │   │   └─────────────┘   │   │   │
+   │   │   └─────────────────────┘   │   │
+   │   └─────────────────────────────┘   │
+   └─────────────────────────────────────┘
+
+   picture frame:  content = photo | padding = white mat | border = wood frame | margin = gap on the wall
+
+   total width = content + padding x2 + border x2 + margin x2
+               = 200     + 20 x2      + 5 x2       + 30 x2    = 310px
+
+   box-sizing: border-box;  -> width INCLUDES padding + border (easier sizing)
+
 */
+
+
+
+
+#box1{
+    border: 1px solid black;
+    width: 300px;
+    height: 200px;
+    font-size: 22px;
+    background-color: lightblue;
+
+    padding: 20px;
+    margin-top: 20px;
+    margin-left: 50px;
+
+
+}
+
+#box2{
+    border: 1px solid black;
+    width: 300px;
+    height: 200px;
+    font-size: 22px;
+    background-color: greenyellow;
+    
+}
 
 
