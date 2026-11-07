@@ -1,21 +1,25 @@
-body{
-    background-color: #1111;
+/* font properties
+
+   font-family     = which font to use (e.g. Arial, "Times New Roman", sans-serif)
+                     list backups after a comma in case the first isn't available
+   font-size       = how big the text is (px, em, rem, %)
+   font-weight     = how thick the text is (normal, bold, or 100-900)
+   font-style      = normal, italic, or oblique
+   color           = the text color (name, #hex, rgb())
+   text-decoration = lines on text (none, underline, overline, line-through)
+                     can add a style too: wavy underline, dotted underline
+   text-align      = left, center, right, justify
+   line-height     = space between lines of text (e.g. 1.5)
+   letter-spacing  = space between letters (e.g. 2px)
+   text-transform  = uppercase, lowercase, capitalize
+
+*/
+
+P{ 
+    font-family: 'sans-serif';
+    font-size: 16px;
+    font-weight: italic;
+    text-decoration: underline;
+    text-align: justify;
+    text-transform: lowercase;
 }
-
-h1{
-    color:#FFFF;
-    font-family:Tiny5 Duo;
-}
-
-
-P{
-    color: #00ff73;
-    font-family:sans-serif;
-    font-style: italic;
-    font-weight: bold;
-    text-decoration: wavy underline;
-    font-size: 20px;
-  
-}
-
-      
