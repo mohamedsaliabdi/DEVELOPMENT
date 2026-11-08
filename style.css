@@ -210,7 +210,7 @@ Remember: Block = new line, Inline = same line, Inline-block = same line + custo
 }
 
 span{
-    
+    display: inline-block;
     width: 200px;
     height: 100px;
     background-color: aqua;
