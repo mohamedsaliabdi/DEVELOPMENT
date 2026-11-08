@@ -139,7 +139,7 @@ p{
 
 
 
-#box1{
+/* #box1{
     border: 1px solid black;
     width: 300px;
     height: 200px;
@@ -160,6 +160,60 @@ p{
     font-size: 22px;
     background-color: greenyellow;
     
+} */
+
+/* A block element starts on a new line and normally takes up the full available width of its parent. */
+
+/* Example
+Example:
+<div>Hello</div>
+<div>World</div>
+
+
+Result:
+Hello
+World
+
+Easy way to remember
+- Block: Starts on a new line. You can set width and height.
+- Inline: Stays on the same line. You cannot normally set width and height.
+- Inline-block: Stays on the same line, but you can set width and height.
+Examples
+div {
+  display: block;
+}
+
+span {
+  display: inline;
+}
+
+button {
+  display: inline-block;
 }
 
 
+Remember: Block = new line, Inline = same line, Inline-block = same line + custom size.
+
+*/
+
+#box1 {
+    height: 200px;
+    width: 300px;
+    border: 1px solid aqua;
+}
+
+#box2 {
+    height: 200px;
+    width: 300px;
+    border: 1px solid aqua;
+
+}
+
+span{
+    
+    width: 200px;
+    height: 100px;
+    background-color: aqua;
+    border: 2px solid black;
+
+}
