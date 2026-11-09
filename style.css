@@ -196,7 +196,7 @@ Remember: Block = new line, Inline = same line, Inline-block = same line + custo
 
 */
 
-#box1 {
+/* #box1 {
     height: 200px;
     width: 300px;
     border: 1px solid aqua;
@@ -216,4 +216,152 @@ span{
     background-color: aqua;
     border: 2px solid black;
 
+} */
+
+
+/* flex allows you to arrange elements horizontaly  or vertically.
+
+     IMPORTANT: put display: flex on the CONTAINER (the parent), not on the items.
+     The container controls how its children (the items) are arranged.
+       .flex-container { display: flex; }   <- correct (parent)
+       .box            { display: flex; }   <- wrong place to arrange BOX1, BOX2, BOX3
+
+     main axis  = the direction items flow (row = left->right, column = top->bottom)
+     cross axis = the other direction (perpendicular to the main axis)
+
+     ===== CONTAINER properties (go on the parent) =====
+
+     display: flex           = turns on flexbox (items line up in a row by default)
+     flex-direction          = which way items flow
+                               row (default) | row-reverse | column | column-reverse
+     flex-wrap               = should items move to a new line when there's no room?
+                               nowrap (default, squeeze on one line) | wrap | wrap-reverse
+     flex-flow               = shorthand for direction + wrap  (e.g. flex-flow: row wrap)
+     justify-content         = align items along the MAIN axis
+                               flex-start | flex-end | center
+                               space-between (gaps only between items)
+                               space-around  (equal space around each item)
+                               space-evenly  (exactly equal gaps everywhere)
+     align-items             = align items along the CROSS axis (one line)
+                               stretch (default, fill height) | flex-start | flex-end | center | baseline
+     align-content           = align the LINES when wrapping (needs flex-wrap: wrap + more than one line)
+                               flex-start | flex-end | center | space-between | space-around | stretch
+     gap                     = space between items (e.g. gap: 10px;  or row-gap / column-gap)
+
+     center anything trick:  display: flex; justify-content: center; align-items: center;
+
+     ===== ITEM properties (go on the children) =====
+
+     order                   = change the visual order (default 0, lower comes first) e.g. order: -1
+     flex-grow               = how much an item grows to fill extra space (0 = don't grow, 1 = grow)
+     flex-shrink             = how much an item shrinks when space is tight (1 = default, 0 = don't shrink)
+     flex-basis              = starting size before growing/shrinking (auto, 100px, 30%)
+     flex                    = shorthand: grow shrink basis  (e.g. flex: 1;  = all items share space equally)
+     align-self              = override align-items for ONE item
+                               auto | flex-start | flex-end | center | baseline | stretch
+*/
+/* .flex-container {
+    display: flex;
+    height: 200px;
+    align-items: flex-end;
+    border: 2px solid black;
+}
+
+.box {
+    width: 70px;
+    height: 50px;
+    background-color: aqua;
+} */
+
+/* grid allows you to arrange elements in ROWS and COLUMNS at the same time (2D).
+     flex = one direction (row OR column), grid = two directions (rows AND columns).
+
+     IMPORTANT: same as flex, put display: grid on the CONTAINER (the parent), not on the items.
+
+     ===== CONTAINER properties (go on the parent) =====
+
+     display: grid           = turns on grid
+     grid-template-columns   = how many columns and how wide
+                               e.g. 100px 100px 100px  (3 columns of 100px)
+                                    1fr 2fr            (fr = fraction of free space; 2nd is twice as wide)
+                                    repeat(3, 1fr)     (3 equal columns)
+                                    repeat(auto-fit, minmax(100px, 1fr))  (responsive: fits as many as possible)
+     grid-template-rows      = how many rows and how tall (same values as columns)
+     grid-template-areas     = name areas of the grid, e.g.
+                                 "header header"
+                                 "sidebar main"
+     gap                     = space between rows and columns (or row-gap / column-gap)
+     justify-items           = align items inside their cell horizontally
+                               stretch (default) | start | end | center
+     align-items             = align items inside their cell vertically
+                               stretch (default) | start | end | center
+     place-items             = shorthand: align-items justify-items (e.g. place-items: center)
+     justify-content         = move the WHOLE grid horizontally inside the container
+                               start | end | center | space-between | space-around | space-evenly
+     align-content           = move the WHOLE grid vertically inside the container (same values)
+     grid-auto-rows          = height of extra rows created automatically (e.g. grid-auto-rows: 100px)
+     grid-auto-flow          = how auto-placed items fill in: row (default) | column | dense
+
+     ===== ITEM properties (go on the children) =====
+
+     grid-column             = which columns the item covers, start / end line
+                               e.g. grid-column: 1 / 3;   (from line 1 to line 3 = 2 columns wide)
+                                    grid-column: span 2;  (take 2 columns)
+     grid-row                = same for rows (e.g. grid-row: 1 / 3; or span 2)
+     grid-area               = put the item in a named area (e.g. grid-area: header;)
+     justify-self            = align ONE item horizontally in its cell (start | end | center | stretch)
+     align-self              = align ONE item vertically in its cell (start | end | center | stretch)
+     place-self              = shorthand: align-self justify-self
+*/
+/* .grid-container{
+    display: grid;
+    border: 2px solid black;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 20px;
+} */
+
+
+
+/* flaot positions an elements to left or right side of a contain ex popular for wrapping elements around an image 
+
+
+*/
+
+/* positioning is a way to control where an element sits on the page. There are 5 types of positioning:
+
+1. static (default) - the element is positioned according to the normal flow of the page.
+2. relative - the element is positioned relative to its normal position. 
+You can use top, bottom, left, and right properties to move it around.
+3. absolute - the element is positioned relative to its nearest positioned ancestor (not static). 
+If there is no such ancestor, it will be positioned relative to the initial containing block (usually the viewport). 
+You can use top, bottom, left, and right properties to move it around.
+4. fixed - the element is positioned relative to the viewport, which means it stays in the same place even when the page is scrolled. You can use top, bottom, left, and right properties to move it around.
+5. sticky - the element is positioned based on the user's scroll position. It toggles between */
+
+
+
+
+
+#box1 {
+    position: relative;
+    top: 60px;
+    left: 50px;
+    width: 300px;
+    height: 300px;
+    background-color: aqua;
+
+    top: 100px;
+
+}
+
+#box2 {
+    width: 100px;
+    height: 100px;
+    background-color: orange;
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    right: 100px;
+    bottom: 100px;
 }
