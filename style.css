@@ -376,7 +376,7 @@ You can use top, bottom, left, and right properties to move it around.
 
 
 #box1:hover{
-    animation: 5s linear 0s  infinite running myscale;
+    animation: 1s linear 0s  infinite running mycolourchange;
 }
 
 
@@ -459,3 +459,9 @@ the fourth value is the spread radius which determines how large the shadow is *
 
 
 /* animation is  */
+
+
+@keyframes mycolourchange{
+    20%{background-color : orange}
+    80%{background-color: yellow;}
+}
