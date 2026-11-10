@@ -344,12 +344,29 @@ You can use top, bottom, left, and right properties to move it around.
 
 
 #box1 {
-    position: relative;
-    width: 300px;
-    height: 300px;
+    width: 250px;
+    height: 250px;
     background-color: aqua;
-    position: sticky;
-    top:0px;
+    font-size: 225px;
+    text-align: center;
+
+
+
+
+    /* animation: myslide;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-delay: 0s;
+    animation-play-state:running;
+    animation-timing-function: linear; */
+
+
+    /* animation: 5s linear 0s  infinite running myslide; */
+
+    /* the animation start with duration timing function delay , play state then the animation */
+
+
+
  
 
     
@@ -357,7 +374,35 @@ You can use top, bottom, left, and right properties to move it around.
 
 }
 
-#box2 {
+
+#box1:hover{
+    animation: 5s linear 0s  infinite running myscale;
+}
+
+
+@keyframes myslide{
+    from{margin-left:100%}
+    to{margin-left:100}
+}
+
+
+@keyframes myrotate{
+
+    100%{transform:rotateZ(360deg)}
+    
+}
+
+
+@keyframes myopacity{
+    50%{opacity: 0;}
+}
+
+
+
+@keyframes myscale{
+    50%{transform:scale(2,2)}
+}
+/* #box2 {
     width: 100px;
     height: 100px;
     background-color: orange;
@@ -395,5 +440,22 @@ li:nth-child(8){
     background-color: lightblue;
 }
 
+h1{
+    box-shadow: 15px 10px 2px gray;
+} */
+/* the first value is the x axis offset postive value will move the shadow to the right and 
+negative value will move it to the left 
+
+the second value is the y axis offset postive value will move the shadow down and negative value will move it up
+
+the third value is the blur radius which determines how much the shadow is blurred
+
+the fourth value is the spread radius which determines how large the shadow is */
 
 
+     /* <!-- transformations is the process of changing the size, shape, or position of an element
+        there is the following properties available: -->
+     <!-- transform: rotate() | scale() | translate() | skew() --> */
+
+
+/* animation is  */
